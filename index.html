@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Document Load Instrumentation Example</title>
+  <base href="/" />
+
+  <meta name="traceparent" content="00-ab42124a3c573678d4d8b21ba52df3bf-d21f7bc17caa5aba-01" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  
+  <button class="button" data-telemetry="true" data-url="https://httpbin.org/get">httpbin</button>
+  <button class="button" data-telemetry="false" data-url="https://catfact.ninja/breeds">cats</button>
+  <button class="button" data-telemetry="true" data-url="https://jsonplaceholder.typicode.com/todos">To Dos</button>
+  <hr>
+  <button class="button" data-telemetry="true" data-url="https://httpbin.org/get||https://catfact.ninja/breeds||https://jsonplaceholder.typicode.com/todos">Request all</button>
+
+  <pre id="result"></pre>
+
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
